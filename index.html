@@ -19,12 +19,12 @@ function dailyTotal(x){return x?x.rice+x.side+x.soup:0}
 function totalLabel(x){return '<span class="daily-total">총 '+dailyTotal(x)+'세트</span>'}
 function labelTags(x,small){return Object.keys(names).filter(k=>x[k]).map(k=>'<span class="tag '+k+'">'+(small?short[k]:names[k])+' '+x[k]+'</span>').join('')}
 
-const planningStart='2026-11-06',planningEnd='2026-12-31';
+const planningStart='2026-11-09',planningEnd='2026-12-31';
 function dateKey(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function shortDate(key){return Number(key.slice(5,7))+'/'+Number(key.slice(8,10))}
 function coveragePlan(){
  const weeks=[],days={};let stock=0;
- for(let day=new Date(2026,10,6,12);dateKey(day)<=planningEnd;day.setDate(day.getDate()+1)){
+ for(let day=new Date(2026,10,9,12);dateKey(day)<=planningEnd;day.setDate(day.getDate()+1)){
   const key=dateKey(day),weekday=day.getDay(),need=weekday===0||weekday===6?3:2;
   if(!weeks.length||weekday===1)weeks.push({start:key,end:key,need:0,supply:0,opening:stock,closing:stock,shortage:0,shortDays:[]});
   const opening=stock,supply=dailyTotal(meals[key]),shortage=Math.max(0,need-opening-supply);
@@ -40,7 +40,7 @@ function weekStatus(w){return w.shortage?w.shortage+'세트 부족':'부족 없�
 function shortageLabel(date){const day=coveragePlan().days[date];return day&&day.shortage?'<span class="shortage-label">'+day.shortage+'세트 부족</span>':''}
 function renderWeekly(){
  const weeks=weeklyChecks().filter(w=>w.start.slice(5,7)===String(month)||w.end.slice(5,7)===String(month));
- document.getElementById('weekly').innerHTML='<h2>주간 식사 세트 확인</h2><p class="weekly-note">밥·반찬·찬찬국 각각 1세트=한 끼 기준 · 평일 하루 2세트(집 아침 + 어린이집 저녁), 토·일 하루 3세트<br>11/6 시작 재고 0세트 기준. 남은 세트는 다음 날·다음 주로 이월하며 금요일 배송분도 주말에 사용해요.<br>배송 당일 사용 가능한 것으로 계산하며 보관기한·메뉴 중복은 계산하지 않아요. 추가로 준비해야 하는 세트 수이며, 과거 부족분을 이후 배송에서 차감하지 않아요. 월 경계 주는 양쪽 달에 같은 주 전체를 표시해요.</p><div class="weekly-cards">'+weeks.map(w=>'<div class="weekly-card '+(w.shortage?'shortage':'')+'"><strong>'+shortDate(w.start)+' ~ '+shortDate(w.end)+'</strong><div>이월 '+w.opening+' + 배송 '+w.supply+' · 필요 '+w.need+'세트</div><div class="weekly-status">'+weekStatus(w)+'</div>'+(w.shortDays.length?'<div>'+w.shortDays.map(d=>shortDate(d.date)+' '+d.count+'세트').join(' · ')+'</div>':'')+'</div>').join('')+'</div>';
+ document.getElementById('weekly').innerHTML='<h2>주간 식사 세트 확인</h2><p class="weekly-note">밥·반찬·찬찬국 각각 1세트=한 끼 기준 · 평일 하루 2세트(집 아침 + 어린이집 저녁), 토·일 하루 3세트<br>11/9 시작 재고 0세트 기준. 남은 세트는 다음 날·다음 주로 이월하며 금요일 배송분도 주말에 사용해요.<br>배송 당일 사용 가능한 것으로 계산하며 보관기한·메뉴 중복은 계산하지 않아요. 추가로 준비해야 하는 세트 수이며, 과거 부족분을 이후 배송에서 차감하지 않아요. 월 경계 주는 양쪽 달에 같은 주 전체를 표시해요.</p><div class="weekly-cards">'+weeks.map(w=>'<div class="weekly-card '+(w.shortage?'shortage':'')+'"><strong>'+shortDate(w.start)+' ~ '+shortDate(w.end)+'</strong><div>이월 '+w.opening+' + 배송 '+w.supply+' · 필요 '+w.need+'세트</div><div class="weekly-status">'+weekStatus(w)+'</div>'+(w.shortDays.length?'<div>'+w.shortDays.map(d=>shortDate(d.date)+' '+d.count+'세트').join(' · ')+'</div>':'')+'</div>').join('')+'</div>';
 }
 
 function render(){renderWeekly();const coverage=coveragePlan();const prefix='2026-'+String(month).padStart(2,'0')+'-',rows=Object.keys(meals).filter(x=>x.startsWith(prefix)).sort();const totals={rice:0,side:0,soup:0};rows.forEach(date=>Object.keys(totals).forEach(k=>totals[k]+=meals[date][k]));

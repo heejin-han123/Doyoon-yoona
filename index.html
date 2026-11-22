@@ -1,20 +1,17 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7faf8"><title>도윤이 💙 윤아 💛 식단 캘린더</title><style>
 *{box-sizing:border-box}body{margin:0;background:#f7faf8;color:#263d34;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}main{max-width:900px;margin:auto;padding:26px 16px 60px}.eyebrow{color:#678d77;font-size:11px;font-weight:750;letter-spacing:.1em}h1{font-size:clamp(28px,5.5vw,44px);letter-spacing:-.06em;margin:12px 0 9px;line-height:1.4}header{border-bottom:1px solid #dce9e0;padding:15px 0 22px}header p{color:#82968b;font-size:13px;margin:0}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:22px 0}.stat{background:#e9f2e8;padding:17px 12px;border-radius:13px}.stat small{font-size:11px;color:#6d8574}.stat strong{display:block;font-size:29px;margin-top:5px}.stat strong em{font-style:normal;font-weight:400;font-size:11px;color:#8da28c;margin-left:3px}.panel{background:white;border:1px solid #e0ebe2;border-radius:19px;padding:22px;box-shadow:0 6px 25px #48654b0c}.head{display:flex;justify-content:space-between;gap:9px;align-items:center;flex-wrap:wrap}.monthnav{display:flex;gap:10px;align-items:center}.monthnav strong{font-size:20px;white-space:nowrap}.monthnav button{border:1px solid #e2eee3;background:#f0f6ee;border-radius:8px;color:#51735b;padding:3px 12px;font-size:24px;cursor:pointer}.monthnav button:disabled{opacity:.35;cursor:default}.modes{display:flex;background:#edf4ec;border-radius:10px;padding:4px;gap:4px}.modes button{border:0;background:transparent;border-radius:7px;padding:10px 13px;color:#82948a;font-weight:700;cursor:pointer}.modes button.on{background:white;color:#37684e;box-shadow:0 2px 6px #0001}.legend{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}.tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:5px 7px;border-radius:6px;white-space:nowrap}.daily-total{display:block;color:#37684e;font-size:13px;font-weight:800;line-height:1.4;margin-top:5px}.itemdate .daily-total{margin-top:4px}.detail .daily-total{font-size:18px;margin:0 0 12px}.hello{background:#f3eaff;color:#8355a4}.meal-plan{font-size:12px;line-height:1.8;padding-left:18px}.rice{background:#eaf0ff;color:#4d73bb}.side{background:#fff0e7;color:#aa6e49}.soup{background:#e1f5ef;color:#348168}.week,.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.week span{text-align:center;padding:13px 0;color:#839a8b;font-size:12px;font-weight:700}.week span:first-child{color:#d48d82}.day{border:1px solid #eaf0e9;background:white;min-width:0;min-height:110px;margin:-.5px;padding:7px 5px;text-align:left;cursor:pointer}.day.blank{background:#fafdFA;cursor:default}.day.active{background:#edf6ed;outline:2px solid #93bc9b;outline-offset:-2px;position:relative}.number{color:#546e5e;font-weight:700;font-size:12px}.daytags{margin-top:7px;display:flex;flex-direction:column;gap:4px}.daytags .tag{padding:4px 5px;font-size:10px}.item{display:flex;width:100%;align-items:center;gap:12px;text-align:left;border:0;border-bottom:1px solid #edf1eb;background:white;padding:14px 5px;cursor:pointer}.item.active{background:#f0f8ef}.itemdate{font-weight:750;font-size:12px;width:114px;flex-shrink:0}.itemtags{display:flex;flex:1;flex-wrap:wrap;gap:5px}.chev{font-size:22px;color:#96a89b}.detail{background:#f1f7ef;margin-top:18px;padding:17px;border-radius:12px}.detail h2{font-size:16px;margin:0 0 12px}.detail p{font-size:12px;margin:12px 0 0;color:#708875}.notice{font-size:12px;line-height:1.9;color:#849b8b;margin:21px 3px}footer{text-align:center;color:#8fa592;font-size:12px;padding-top:30px}@media(max-width:600px){main{padding:15px 9px 40px}.stats{gap:5px}.stat{padding:12px 7px}.stat strong{font-size:24px}.stat small{font-size:10px}.panel{padding:14px 8px}.monthnav{gap:5px}.monthnav strong{font-size:16px}.monthnav button{padding:2px 8px}.modes button{padding:8px;font-size:11px}.day{min-height:80px;padding:5px 2px}.daytags .tag{font-size:9px;padding:3px 1px;white-space:normal;justify-content:center}.number{font-size:11px}.day .daily-total{font-size:10px}.item{gap:8px}.itemdate{width:97px;font-size:11px}}
  .weekly-check{margin:16px 0 20px}.weekly-check h2{font-size:16px;margin:0 0 7px}.weekly-note{font-size:11px;color:#708875;line-height:1.7;margin:0 0 10px}.weekly-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}.weekly-card{padding:12px;border:1px solid #dce9e0;border-radius:10px;background:#f5f9f3;font-size:12px;line-height:1.7}.weekly-card strong{display:block}.weekly-card.shortage{background:#fff3ec;border-color:#efcab6}.weekly-status{font-weight:800;color:#37684e}.shortage .weekly-status{color:#a34d2d}.weekly-detail{font-size:12px;margin-top:12px;color:#a34d2d}.shortage-label{display:block;font-size:11px;font-weight:800;color:#a34d2d;background:#fff0e5;border-radius:5px;padding:3px;margin-top:5px}.day.has-shortage{background:#fff9f4;border-color:#efcab6}.day.has-shortage.active{outline-color:#c48662}.itemdate .shortage-label{font-size:10px;white-space:normal}@media(max-width:600px){.day .shortage-label{font-size:9px;padding:3px 1px}} .head{position:sticky;top:0;z-index:5;background:#fff;padding:8px 0}.week{position:sticky;top:var(--calendar-head-height,58px);z-index:4;background:#fff;box-shadow:0 2px 3px #263d3410}.day{scroll-margin-top:110px} .day:disabled,.item:disabled{opacity:.55;cursor:default}.item:disabled .chev{visibility:hidden}
-</style></head><body><main><header><div class="eyebrow">OUR LITTLE TABLE · BEBECOOK</div><h1>도윤이 💙 윤아 💛<br>식단 캘린더</h1><p>배송일과 먹는 날을 따로 확인해요</p></header><div class="stats" id="stats"></div><section class="panel"><div class="head"><div class="monthnav"><button id="prev" aria-label="이전 달">‹</button><strong id="month"></strong><button id="next" aria-label="다음 달">›</button></div><div class="modes"><button id="cal" class="on">▦ 달력</button><button id="list">☷ 리스트</button></div></div><div class="legend"><span class="tag rice">영양밥</span><span class="tag side">영양반찬</span><span class="tag soup">영양찬찬국</span><span class="tag hello">헬로맘마</span></div><div id="body"></div><div id="detail" class="detail" hidden></div></section><p class="notice">※ 2026년 11월 19일 베베쿡 영양밥·영양반찬의 확인된 배송 변경을 반영했어요. 1세트는 두 아이가 나누는 한 끼예요. 베베쿡은 오전 7시 도착하며 평일 점심은 어린이집에서 제공해요. 확인된 헬로맘마 11/16·18·20 각 2세트는 다음 이틀 아침에 먹어요. 금·토 도착 찬찬국은 토·일 점심과 저녁에 배정했어요. 11/16~12/13 끼니를 계산했으며 기존 집 재고는 제외했어요. 12/3·8 영양반찬 각 1세트 배송 변경을 확인해 두 날 저녁에 배정했어요. 영양밥 마지막 배송일은 12/24, 영양반찬은 2027/1/11이에요. 12/14 이후 끼니는 아직 배분하지 않았어요. 실제 소비기한과 보관 상태는 먹기 전에 확인해주세요. 일정은 자동 연동되지 않아요.</p><footer>도윤이랑 윤아랑 ♡</footer></main><script>
+</style></head><body><main><header><div class="eyebrow">OUR LITTLE TABLE · BEBECOOK</div><h1>도윤이 💙 윤아 💛<br>식단 캘린더</h1><p>배송일과 먹는 날을 따로 확인해요</p></header><div class="stats" id="stats"></div><section class="panel"><div class="head"><div class="monthnav"><button id="prev" aria-label="이전 달">‹</button><strong id="month"></strong><button id="next" aria-label="다음 달">›</button></div><div class="modes"><button id="cal" class="on">▦ 달력</button><button id="list">☷ 리스트</button></div></div><div class="legend"><span class="tag rice">영양밥</span><span class="tag side">영양반찬</span><span class="tag soup">영양찬찬국</span><span class="tag hello">헬로맘마</span></div><div id="body"></div><div id="detail" class="detail" hidden></div></section><p class="notice">※ 배송 일정은 2026년 11월 21일 업체 조회 기준, 식사 기준은 11월 22일 변경 내용이에요. 평일 아침은 베베쿡 찬찬국 또는 영양반찬 1세트, 저녁은 어린이집에 보낼 영양반찬 1세트로 하루 2세트가 필요해요. 점심은 어린이집에서 제공해요. 1세트는 두 아이가 나누는 한 끼이며 오전 7시 도착해요. 현재 확인된 평일 반찬은 저녁에 배정했고 아침용 추가 배송은 아직 조정되지 않았어요. 금·토 찬찬국은 토·일 점심·저녁, 11/27·28 영양밥은 11/28·29 아침에 배정했어요. 이후 주말 아침 상품과 11/22 아침 재고는 확인이 필요해요. 맘마찬 추가 주문이나 집 재고는 추정하지 않았어요. 12/14 이후 끼니는 아직 배분하지 않았어요. 실제 소비기한·보관 상태는 먹기 전에 확인해주세요. 업체 추가 변경은 로그인 후 진행하며 일정은 자동 연동되지 않아요.</p><footer>도윤이랑 윤아랑 ♡</footer></main><script>
 const meals={};function add(date,type,count){if(!meals[date])meals[date]={rice:0,side:0,soup:0,hello:0};meals[date][type]+=count}
 // Verified against Bebecook's five active orders in Meal Manager (November 6, 2026).
 // Separate rice subscriptions can deliver on the same day: add their sets.
 [[6,2],[9,1],[10,1],[11,1]].forEach(([d,n])=>add('2026-11-'+String(d).padStart(2,'0'),'rice',n)); // 09.06 영양밥 (through 11.11)
-[[6,1],[7,2],[10,1],[12,2],[13,1],[14,2],[16,1],[17,1],[19,1],[20,1],[23,1],[24,1]].forEach(([d,n])=>add('2026-11-'+String(d).padStart(2,'0'),'rice',n)); // 10.03 영양밥 (through 11.24)
-[9,11,13,16,18,23,25,26,27,30].forEach(d=>add('2026-11-'+String(d).padStart(2,'0'),'side',1));
-[2,3,4,7,8,9,11,14,16,18,21,23,28,30].forEach(d=>add('2026-12-'+String(d).padStart(2,'0'),'side',1));
+[[6,1],[7,2],[10,1],[12,2],[13,1],[14,2],[16,1],[17,1],[19,1],[20,1],[27,1],[28,1]].forEach(([d,n])=>add('2026-11-'+String(d).padStart(2,'0'),'rice',n)); // 10.03 영양밥 (last verified 11.21; through 11.28)
+[9,11,13,16,18,23,24,25,26,27,30].forEach(d=>add('2026-11-'+String(d).padStart(2,'0'),'side',1));
+[1,2,3,4,7,8,9,10,11,14,15,16,17].forEach(d=>add('2026-12-'+String(d).padStart(2,'0'),'side',1));
 [13,14,20,21,27,28].forEach(d=>add('2026-11-'+d,'soup',2));
 [4,5,11,12,18,19,24,26].forEach(d=>add('2026-12-'+String(d).padStart(2,'0'),'soup',2));
-// Verified 2026-11-15: January 5/7/9 moved to November 24/25/27; ends December 24.
-[[24,1],[25,1],[26,1],[27,1],[28,2]].forEach(([d,n])=>add('2026-11-'+String(d).padStart(2,'0'),'rice',n));
-[[1,2],[2,1],[3,1],[4,1],[5,2],[7,1],[8,1],[9,1],[10,2],[11,1],[12,2],[15,1],[17,1],[19,2],[22,1],[24,1]].forEach(([d,n])=>add('2026-12-'+String(d).padStart(2,'0'),'rice',n));
-add('2026-11-30','rice',1);
+// The former additional rice order was absent from the 2026-11-21 active-order list.
 [16,18,20].forEach(d=>add('2026-11-'+d,'hello',2));
 const names={rice:'영양밥',side:'영양반찬',soup:'찬찬국',hello:'헬로맘마'},short={rice:'밥',side:'반찬',soup:'국',hello:'맘마'};
 let month=11,mode='cal',selected=null;
@@ -48,41 +45,27 @@ assign('2026-11-18',portion('hello','2026-11-16'),portion('side','2026-11-18'));
 assign('2026-11-19',portion('hello','2026-11-18'),portion('rice','2026-11-19'));
 assign('2026-11-20',portion('hello','2026-11-18'),portion('rice','2026-11-20'));
 assign('2026-11-21',portion('hello','2026-11-20'),portion('soup','2026-11-20'),portion('soup','2026-11-20'));
-assign('2026-11-22',portion('hello','2026-11-20'),portion('soup','2026-11-21'),portion('soup','2026-11-21'));
-assign('2026-11-23',portion('rice','2026-11-23'),portion('side','2026-11-23'));
-assign('2026-11-24',portion('rice','2026-11-24'),portion('rice','2026-11-24'));
-assign('2026-11-25',portion('rice','2026-11-25'),portion('side','2026-11-25'));
-assign('2026-11-26',portion('rice','2026-11-26'),portion('side','2026-11-26'));
-assign('2026-11-27',portion('rice','2026-11-27'),portion('side','2026-11-27'));
-assign('2026-11-28',portion('rice','2026-11-28'),portion('soup','2026-11-27'),portion('soup','2026-11-27'));
+// November 22 breakfast stock/product has not been confirmed; do not invent carryover.
+assign('2026-11-22',null,portion('soup','2026-11-21'),portion('soup','2026-11-21'));
+// Confirmed side deliveries are reserved for daycare dinners. Breakfast requires an additional side or soup set.
+for(const date of ['2026-11-23','2026-11-24','2026-11-25','2026-11-26','2026-11-27','2026-11-30','2026-12-01','2026-12-02','2026-12-03','2026-12-04','2026-12-07','2026-12-08','2026-12-09','2026-12-10','2026-12-11'])assign(date,null,portion('side',date));
+assign('2026-11-28',portion('rice','2026-11-27'),portion('soup','2026-11-27'),portion('soup','2026-11-27'));
 assign('2026-11-29',portion('rice','2026-11-28'),portion('soup','2026-11-28'),portion('soup','2026-11-28'));
-assign('2026-11-30',portion('rice','2026-11-30'),portion('side','2026-11-30'));
-assign('2026-12-01',portion('rice','2026-12-01'),portion('rice','2026-12-01'));
-assign('2026-12-02',portion('rice','2026-12-02'),portion('side','2026-12-02'));
-assign('2026-12-03',portion('rice','2026-12-03'),portion('side','2026-12-03'));
-assign('2026-12-04',portion('rice','2026-12-04'),portion('side','2026-12-04'));
-assign('2026-12-05',portion('rice','2026-12-05'),portion('soup','2026-12-04'),portion('soup','2026-12-04'));
-assign('2026-12-06',portion('rice','2026-12-05'),portion('soup','2026-12-05'),portion('soup','2026-12-05'));
-assign('2026-12-07',portion('rice','2026-12-07'),portion('side','2026-12-07'));
-assign('2026-12-08',portion('rice','2026-12-08'),portion('side','2026-12-08'));
-assign('2026-12-09',portion('rice','2026-12-09'),portion('side','2026-12-09'));
-assign('2026-12-10',portion('rice','2026-12-10'),portion('rice','2026-12-10'));
-assign('2026-12-11',portion('rice','2026-12-11'),portion('side','2026-12-11'));
-assign('2026-12-12',portion('rice','2026-12-12'),portion('soup','2026-12-11'),portion('soup','2026-12-11'));
-assign('2026-12-13',portion('rice','2026-12-12'),portion('soup','2026-12-12'),portion('soup','2026-12-12'));
+for(const [day,delivery] of [['2026-12-05','2026-12-04'],['2026-12-06','2026-12-05'],['2026-12-12','2026-12-11'],['2026-12-13','2026-12-12']])assign(day,null,portion('soup',delivery),portion('soup',delivery));
+const pendingBreakfast=new Set(['2026-11-22','2026-12-05','2026-12-06','2026-12-12','2026-12-13']);
 const slots={breakfast:'아침',lunch:'점심',dinner:'저녁'};
 function coveragePlan(){
  const days={},weeks=[],used={};
  for(let d=new Date(planningStart+'T12:00:00');dateKey(d)<=planningEnd;d.setDate(d.getDate()+1)){
-  const key=dateKey(d),weekend=d.getDay()===0||d.getDay()===6,a=allocations[key]||{},missing=[];
+  const key=dateKey(d),weekend=d.getDay()===0||d.getDay()===6,a=allocations[key]||{},missing=[],pending=[];
   const required=weekend?['breakfast','lunch','dinner']:['breakfast','dinner'];
   required.forEach(slot=>{
    const p=a[slot];
-   if(!p){missing.push(slot);return}
+   if(!p){(slot==='breakfast'&&pendingBreakfast.has(key)?pending:missing).push(slot);return}
    const batch=p.delivery+':'+p.type;
    used[batch]=(used[batch]||0)+p.count;
   });
-  days[key]={need:required.length,shortage:missing.length,missing,allocations:a,weekend,supply:dailyTotal(meals[key])};
+  days[key]={need:required.length,shortage:missing.length,missing,pending,allocations:a,weekend,supply:dailyTotal(meals[key])};
   if(!weeks.length||d.getDay()===1)weeks.push({start:key,end:key,need:0,supply:0,shortage:0});
   const w=weeks[weeks.length-1];w.end=key;w.need+=required.length;w.supply+=dailyTotal(meals[key]);w.shortage+=missing.length;
  }
@@ -93,12 +76,12 @@ function coveragePlan(){
  }));
  return {weeks,days,used,remaining};
 }
-function shortageLabel(date){const day=coveragePlan().days[date];return day&&day.shortage?'<span class="shortage-label">'+day.missing.map(s=>slots[s]).join('·')+' '+day.shortage+'세트 부족</span>':''}
+function shortageLabel(date){const day=coveragePlan().days[date];if(!day)return '';return (day.shortage?'<span class="shortage-label">'+day.missing.map(s=>slots[s]).join('·')+' '+day.shortage+'세트 부족</span>':'')+(day.pending.length?'<span class="shortage-label">'+day.pending.map(s=>slots[s]).join('·')+' 확인 필요</span>':'')}
 function mealDetail(date){
  const a=allocations[date];
  if(!a)return '<p>'+(date<planningStart?'지난 식사·남은 재고는 이번 계산에서 제외했어요.':'끼니별 배분은 아직 확정하지 않았어요. 배송 수량만 표시합니다.')+'</p>';
  return '<ul class="meal-plan">'+Object.keys(slots).map(slot=>{
-  const p=a[slot];if(!p)return slot==='lunch'?'<li>점심: 어린이집 제공</li>':'<li>'+slots[slot]+': '+'배분 미확정'+'</li>';
+  const p=a[slot];if(!p){if(slot==='lunch')return '<li>점심: 어린이집 제공</li>';if(slot==='breakfast'&&pendingBreakfast.has(date))return '<li>아침: '+(date==='2026-11-22'?'영양밥 재고 확인 필요':'반찬·국 세트 상품과 수량 확인 필요')+'</li>';return '<li>'+slots[slot]+': '+(slot==='breakfast'?'찬찬국 또는 영양반찬 1세트 부족 · 배송 조정 필요':'영양반찬 1세트 부족')+'</li>'}
   return '<li>'+slots[slot]+': '+names[p.type]+' 1세트 · '+shortDate(p.delivery)+' 배송분'+(slot==='dinner'&&!coveragePlan().days[date].weekend?' · 어린이집에 보내기':' · 집에서')+'</li>';
  }).join('')+'</ul>';
 }
